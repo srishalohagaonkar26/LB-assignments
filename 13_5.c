@@ -41,6 +41,7 @@ int main()
 
     printf("Enter %d elements:\n", iSize);
     for(iCnt = 0; iCnt < iSize; iCnt++)
+    
     {
         scanf("%d", &p[iCnt]);
     }
