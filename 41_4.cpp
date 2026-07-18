@@ -2,25 +2,31 @@
 using namespace std;
 
 template <class T>
-T SearchFirst(T *arr, int iSize, T iNo)
+T SearchLast(T *arr, int iSize, T iNo)
 {
     int i = 0;
-    int iPos = -1;
-
-    for (i = 0; i < iSize; i++)
+    
+    for (i = iSize; i > 0; i--)
     {
         if (arr[i] == iNo)
         {
-            iPos = i + 1;
+            break;
         }
     }
-    return iPos;
+    if (i == iSize)
+    {
+        return -1;
+    }
+    else
+    {
+        return i + 1;
+    }
 }
 
 int main()
 {
     int arr [] = {10,20,30,10,30,40,10,40,10};
-    int iRet = SearchFirst(arr,9,40);
+    int iRet = SearchLast(arr,9,40);
     printf("%d",iRet);
 
     return 0;
